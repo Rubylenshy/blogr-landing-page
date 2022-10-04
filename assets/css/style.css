@@ -11,9 +11,6 @@
 
 /* Gradients */
 
-/* Intro */
-    --vl-red: hsl(13, 100%, 72%);
-    --light-red: hsl(353, 100%, 62%);
 /* Body */
     --vd-gray-blue: hsl(237, 17%, 21%);
     --vd-desaturated-blue: hsl(237, 23%, 32%);
@@ -31,9 +28,13 @@
 footer, .mobile-nav{
     font-family: var(--ff-ubuntu);
 }
+button{
+    cursor: pointer;
+}
 a{
     text-decoration: none;
     color: initial;
+    cursor: pointer;
 }
 main p{
     color: var(--vd-grayish-blue);
@@ -75,10 +76,10 @@ img{
 header{
     background: linear-gradient(
         to right,
-        var(--light-red),
-        var(--vl-red)
+        var(--vl-red),
+        var(--light-red)
     );
-    height: 70vh;
+    height: 600px;
     border-radius: 0 0 0 120px;
 }
 
@@ -155,11 +156,13 @@ header{
 }
 .nav-li li{
     margin: 10px 0;
+    font-weight: bold;
+    opacity: .7;
 }
-.nav-btns{
+.mobile-nav-btns{
     flex-direction: column;
 }
-.nav-btns button{
+.mobile-nav-btns button{
     width: 40%;
     padding: 15px 0;
     margin: 5px auto;
@@ -167,10 +170,10 @@ header{
     font-size: 1.15em;
     border: none;
 }
-.login{
+.mobile-nav-btns .login{
     background: none;
 }
-.sign-up{
+.mobile-nav-btns .sign-up{
     background: linear-gradient(
         to right,
         var(--vl-red),
@@ -210,11 +213,13 @@ header{
     background: var(--white);
     color: var(--light-red);
     margin-right: 15px;
+    transition: all .4s;
 }
 .learn-more{
     background: transparent;
     color: var(--white);
     outline: 2px solid var(--grayish-blue);
+    transition: all .4s;
 }
 
 .section-one{
@@ -225,7 +230,7 @@ header{
     color: var(--vd-blue);
 }
 .section-one h2{
-    font-size: 1.75em;
+    font-size: 1.60em;
 }
 .section-one h3{
     width: 80%;
@@ -314,11 +319,215 @@ header{
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 882px) {
+    .navbar-desktop,
+    .desktop-future-imgs,
+    .desktop-laptop-imgs{
+        display: initial;
+    }
+    .navbar-mobile,
+    .mobile-nav,
+    .mobile-future-imgs,
+    .mobile-laptop-imgs{
+        display: none;
+    }
+
+    header{
+        height: 500px;
+    }
+    .navbar-desktop{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 100px;
+        align-items: center;
+    }
+    .links{
+        align-items: center;
+    }
+    .illustration-text{
+        padding: 10vh 30px;
+    }
+    .ill-h1{
+        font-size: 2.95em;
+        font-weight: bold;
+    }
+    .register:hover{
+        background: var(--vl-red);
+        color: var(--white);
+    }
+    .learn-more:hover{
+        background: var(--white);
+        color: var(--vl-red);
+    }
+    .desktop-li{
+        margin-left: 30px;
+    }
+    .desktop-arrow{
+        margin: 0 10px;
+        color: var(--white);
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .desktop-arrow:hover{
+        font-weight: bold;
+        text-decoration: underline;
+        transition: all .4s;
+    }
+    .desktop-arrow-img{
+        transition: all .4s;
+    }
+    .desktop-nav-li{
+        position: absolute;
+        display: none;
+        top: 110px;
+        background: var(--white);
+        padding: 20px 20px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 25px 10px hsl(207, 13%, 34%, 0.2);
+    }
+    .company-li{
+        left: 360px;
+    }
+    .connect-li{
+        left: 460px;
+    }
+    .desktop-nav-li li{
+        margin: 10px 0;
+    }
+    .desktop-nav-li a:hover{
+        font-weight: bolder;
+    }
+
+    .desktop-nav-btns button{
+        padding: 15px 30px;
+        margin: 5px auto;
+        font-weight: bold;
+        font-size: 1.15em;
+        border: none;
+        border-radius: 25px;
+    }
+    .desktop-nav-btns .login{
+        background: none;
+        color: var(--white);
+    }
+    .desktop-nav-btns .sign-up{
+        color: var(--vl-red);
+        background: var(--white);
+        transition: all .4s;
+    }
+    .desktop-nav-btns .sign-up:hover{
+        background: var(--vl-red);
+        color: var(--white);
+    }
+
     
+    .section-one{
+        padding: 0 0 0 100px;
+    }   
+    .future-contents{
+        flex-direction: row;
+        text-align: left;
+        margin-top: -80px;
+        justify-content: center;
+        align-items: center;
+    }
+    .future-text-one, .future-text-two{
+        max-width: 600px;
+        min-width: 400px;
+    }
+    .future-contents p{
+        font-size: .85em;
+    }
+    .desktop-future-imgs img{
+        min-width: 350px;
+    }
+
+    .section-two{
+        flex-direction: row;
+        height: 280px;
+        padding: 0 50px;
+        border-radius: 0 120px 0 120px;
+        align-items: center;
+        background: url(../images/bg-pattern-circles.svg) -100px -250px no-repeat var(--vd-gray-blue);
+    }
+    .infrastructure-img-mobile{
+        margin: -50px 0;
+    }
+    .infrastructure-img-mobile img{
+        min-width: 400px;
+    }
+    .phone-texts{
+        text-align: left;
+        background: none;
+        z-index: 5;
+        margin: 0 0 0 40px;
+        padding: 0;
+    }
+    .phone-texts h3{
+        font-size: 1.60em;
+    }
+    .phone-texts p{
+        font-size: 1.0em;
+        margin: 20px 0;
+    }
+
+    .section-three{
+        flex-direction: row;
+        align-items: center;
+        margin: 80px 0;
+    }
+
+    .desktop-laptop-imgs{
+        margin-left: -200px;
+    }
+    .desktop-laptop-imgs img{
+        min-width: 700px;
+    }
+
+    .laptop-texts{
+        text-align: left;
+        margin-left: 5%;
+    }
+    .laptop-texts h3{
+        font-size: 1.6em;
+    }
+    .laptop-texts p{
+        font-size: .95em;
+        width: 70%;
+        margin: 0;
+    }
+
+
+    .footer-li{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 60px 250px 0 150px;
+    }
+    .footer-li img{
+        margin: 0;
+    }
+    .footer-li > div{
+        text-align: left;
+    }
+
+    .footer-li a:hover{
+        text-decoration: underline;
+        opacity: 1;
+    }
 }
 
+@media (max-width: 1150px) {
+    .future-contents{
+        margin-top: 0px;
+    }
+    
+    .footer-li{
+        padding: 60px 120px;
+    }
+}
 @media (max-width: 365px) {
+    
     .illustration-text{
         padding: 8vh 15px;
     }
