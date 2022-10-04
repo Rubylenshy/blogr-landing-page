@@ -13,7 +13,7 @@ const desktopDropDownList = desktopNav.querySelectorAll('.desktop-nav-li')
 
 hamburger.addEventListener('click', ()=>{
     hamburger.classList.toggle('active')
-    mobileNav.classList.toggle('opened')
+    mobileNav.classList.toggle('active')
 })
 
 // Dropdown

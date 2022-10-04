@@ -52,9 +52,6 @@ ul,ol{
 .flex{
     display: flex;
 }
-.opened{
-    left: 0 !important;
-}
 .flipped{
     transform: rotate(-180deg);
 }
@@ -120,8 +117,8 @@ header{
 }
 
 .mobile-nav{
-    position: absolute;
-    z-index: 5;
+    display: block;
+    position: fixed;
     left: 100%;
     width: 90%;
     margin: 0 5%;
@@ -131,6 +128,9 @@ header{
     text-align: center;
     font-weight: bold;
     transition: all .3s;
+}
+.mobile-nav.active{
+    left: 0;
 }
 .arrow{
     font-size: 1.25em;
