@@ -71,11 +71,7 @@ img{
 }
 /* Header */
 header{
-    background: linear-gradient(
-        to right,
-        var(--vl-red),
-        var(--light-red)
-    );
+    background: url(../images/bg-pattern-intro-mobile.svg) center  no-repeat var(--light-red);
     height: 600px;
     border-radius: 0 0 0 120px;
 }
@@ -334,6 +330,7 @@ header{
 
     header{
         height: 500px;
+        background: url(../images/bg-pattern-intro-desktop.svg) center  no-repeat var(--light-red);
     }
     .navbar-desktop{
         display: flex;
