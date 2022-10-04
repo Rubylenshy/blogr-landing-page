@@ -1,6 +1,6 @@
 # Frontend Mentor - Blogr landing page
 
-![Design preview for the Blogr landing page coding challenge](assets/design/desktop-design.jpg)
+![Design preview for the Blogr landing page coding challenge](assets/design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
@@ -17,7 +17,7 @@ Thanks for checking out this front-end coding challenge.
 
 ### Links
 
-- Live Site URL: [Blogr landing page]()
+- Live Site URL: [Blogr landing page](https://rubylenshy.github.io/blogr-landing-page/)
 
 ## Author
 
